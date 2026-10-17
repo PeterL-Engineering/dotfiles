@@ -117,5 +117,3 @@ if ! shopt -oq posix; then
 fi
 
 # eval "$(keychain --eval --agents ssh id_ed25519)"
-
-alias cdg='cd /mnt/c/Users/leong/Documents/GitHub'
