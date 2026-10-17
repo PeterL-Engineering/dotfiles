@@ -1,0 +1,41 @@
+# enable color support of ls and grep
+if [ -x /usr/bin/dircolors ]; then
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# alert for long running commands. Use like so:
+#   sleep 10; alert
+alert() {
+    local rc=$?
+    notify-send --urgency=low \
+        -i "$([ $rc = 0 ] && echo terminal || echo error)" \
+        "$(fc -ln -1 | sed -e 's/^\s*//;s/[;&|]\s*alert$//')"
+}
+
+# common cd directories
+alias cdg='cd /mnt/c/Users/leong/Documents/GitHub'
+alias c352='code ece352-computer-organization/'
+alias c355='code ece355-signal-analysis-and-communication/'
+alias c358='code ece358-foundations-of-computing/'
+alias c360='code ece360-electronics/'
+alias c389='code mat389-complex-analysis/'
+
+# common github commands
+alias gs='git status'
+alias gpl='git pull'
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias gp='git push'
+
+# misc commands
+alias c='code .'
+alias ..='cd ..'
+alias mk='make -j4' 
