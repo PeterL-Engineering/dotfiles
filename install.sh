@@ -9,3 +9,5 @@ ln -sf "$DOTFILES/.zsh_aliases" "$HOME/.zsh_aliases"
 ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES/.vimrc" "$HOME/.vimrc"
 ln -sf "$DOTFILES/.profile" "$HOME/.profile"
+
+bash "$(dirname "$0")/install-pure.sh"
